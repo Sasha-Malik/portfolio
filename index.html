@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap">
+        <link rel="stylesheet" href="./style.css" type="text/css">
+        <base target="_blank">
+        <title>Sasha's Homepage</title>
+    </head>
+    <body>
+        <div id="wrapper1">
+            <div id="wrapper2">
+                <!-- Introduction -->
+                <div class="intro-box">
+                    <div class="left-box hide-mobile" style="float:left;">
+                        <f>
+                            <p>Hi!</p>
+                            <p>
+                                I'm <name>Sasha</name>.
+                            </p>
+                            <p>
+                                I'm a <acc>Computer Scientist</acc> .
+                            </p>
+                        </f>
+                    </div>
+                    <div class="right-box" style="float:right;">
+                        <img src="./media/start-image-bg.png" alt="Hello! I'm Sasha!">
+                    </div>
+                </div>
+                <div class="intro-box show-mobile">
+                    <div class="left-box">
+                        <p>
+                            Hi, I'm <name>Sasha</name>
+                            !
+                        </p>
+                        <p>
+                            I'm a <acc>Computer Scientist</acc> .
+                        </p>
+                    </div>
+                </div>
+                <!-- Menu -->
+                <div class="menu">
+                    <ul>
+                        <li class="hide-mobile">
+                            <a href="#hello" target="_self">HELLO!</a>
+                        </li>
+                        <li class="hide-mobile">
+                            <a href="#research" target="_self">PROJECTS</a>
+                        </li>
+                        <li class="hide-mobile">
+                            <a href="#more" target="_self">MORE</a>
+                        </li>
+                        <li>
+                            <a href="mailto:ssm9960@nyu.edu">@</a>
+                            <a href="https://github.com/Sasha-Malik">
+                                <img src="./media/github.png">
+                            </a>
+                            <a href="./cv/resume.pdf">CV</a>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript" src="./scripts/stick.js"></script>
+                <!-- Space -->
+                <div style="height: 15vh;" class="hide-mobile"></div>
+                <div class="separator hide-mobile"></div>
+                <!-- The content -->
+                <div id="content-space">
+                    <div class="content">
+
+                        <!-- <img class="bg hide-mobile" src="./media/notes-bg-small.png"> -->
+
+                        <!-- Hello! -->
+                        <div class="text">
+                            <a class="anchor" name="hello"></a>
+                            <h1>HELLO!</h1>
+                            <p>
+                                I'm a Junior at
+                                <a href="https://nyuad.nyu.edu/en/">
+                                    <int>New York University</int>
+                                </a>
+                                majoring in <int>Computer Science</int>
+                                with a minor in Applied Mathematics.
+                            </p>
+                            <p>
+                                I have a passion for exploring the frontiers of technology, 
+                                with a particular fascination for the transformative potential of machine learning and quantum computing.
+                    
+                            <p>If I'm not coding, you will probably find me falling off a climbing wall.</p>
+                            <br>
+                            <p>
+                                <a href="./cv/resume.pdf">
+                                    <int>Resume</int>
+                                </a>
+                        
+                            </p>
+
+                        </div>
+                        <!-- Research -->
+                        <div class="text">
+                            <a class="anchor" name="research"></a>
+                            <h1>PROJECTS</h1>
+                                <div class="project-card">
+                                    <h2 data-link="https://github.com/Sasha-Malik/Qommute">Qommute</h2>
+                                    <p>Open-source python package Qommute which optimizes complex transportation networks
+                                         by utilizing quantum technologies for station placement and route optimization.
+                                        The solution aims to minimize delays, reduce operational costs, and improve the overall effectiveness of the system.
+                                        Our approach combines quantum algorithms like the Variational Quantum Eigensolver (VQE) and the Quantum Approximate Optimization Algorithm (QAOA) 
+                                        with a machine learning model built using PyTorch. This model, trained on extensive historical data, accurately predicts potential delays. 
+                                        These delay predictions are seamlessly integrated into the quantum route optimization process, reducing delays and operational costs. 
+                                     </p>
+                                </div>
+                                <div class="project-card">
+                                    <h2 data-link = "https://github.com/Sasha-Malik/Qathir-1.0">Qathir</h2>
+                                    <p>By leveraging the quantum-enhanced end-to-end solution for cost-efficient sensor placement and rapid fault and vulnerability localization, Qathir enables the robust and efficient use of the increasingly complex water distribution networks of tomorrow.</p>
+                                </div>
+                                <div class="project-card">
+                                    <h2 data-link = "https://course-search-project.glitch.me/">Course Search</h2>
+                                    <p>The Course Search Application, designed for New York University, is a comprehensive full-stack web tool that empowers students to explore, evaluate, and interact with their courses in a more efficient manner. Users can submit course reviews and utilize diverse criteria to visualize and compare various offerings. Additionally, the application provides a unique feature allowing students to join course-specific study focus rooms for seamless collaboration, leveraging the WebRTC technology. This innovative solution streamlines the course selection process and fosters a collaborative learning environment for NYU students, ultimately enhancing their educational experience. The application is freely accessible, contributing to a more accessible and efficient academic journey for the university's students.
+                                    </p>
+                                </div>
+
+                                <script>
+                                    const h2Elements = document.querySelectorAll('.project-card h2[data-link]');
+                                  
+                                    h2Elements.forEach(h2 => {
+                                      h2.addEventListener('click', function () {
+                                        const link = this.getAttribute('data-link');
+                                        window.open(link, '_blank');
+                                      });
+                                    });
+                                  </script>                                                                      
+                        </div>
+                    </div>
+                </div>
+                <!-- More -->
+                <a class="anchor" name="more"></a>
+                <div id="content-space" class="last">
+                    <div style="background: white; z-index:2;width:100vw; height:100%; position:absolute; top:0;"></div>
+                    <div class="content" style="z-index:10;">
+                        <!-- Relevant Skills and Coursework -->
+                        <div class="text relevant-skills-section" style="width:80%; margin-bottom: 1vh;">
+                            <h2>RELEVANT SKILLS AND COURSEWORK</h2>
+                            
+                            <!-- Courses -->
+                            <h2 class = "h2">Courses</h2>
+                                <ul>
+                                    <li>Data Structures</li>
+                                    <li>Algorithms</li>
+                                    <li>Machine Learning</li>
+                                    <li>Computer Networks</li>
+                                    <li>Computer System Organization</li>
+                                    <li>Data Science</li>
+                                    <li>Linear Algebra</li>
+                                    <li>Multivariable Calculus</li>
+                                    <li>Discrete Mathematics</li>
+                                </ul>
+
+                            <!-- Skills -->
+                            <h2 class = "h2">Skills</h2>
+                                <ul>
+                                    <li>Programming: Python (PyTorch, TensorFlow), R, C/C++, HTML/CSS, JavaScript, SPARQL</li>
+                                    <li>Other: Qiskit, Node.js, Express.js, MongoDB, Socket.IO, Selenium, REST APIs, Rustworkx, WebSocket, LATEX, Git</li>
+                                </ul>
+                        </div>
+                    </div><br>
+                    <br>
+                <br>
+            <br>
+        </div>
+<script type="text/javascript" src="scripts/collapsible.js"></script>
+</body>
+</html>
