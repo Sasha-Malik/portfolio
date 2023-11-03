@@ -328,7 +328,7 @@ h3:hover {
     margin-bottom: 15vh;
     width: 70%;
     font-size: 18px;
-    font-size: 1.0875vw;
+    font-size: 1.0975vw;
     padding-left: 10%;
 }
 
@@ -581,14 +581,38 @@ h3:hover {
     background-color: #fdfdfd;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 30px;
-    margin: 10px 0;
+    padding: 55px;
+    margin-top: 30px ;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+
+  .project-card:hover {
+    transform: scale(1.01);
+  }
+
+  .project-card:hover::before {
+    opacity: 1;
+  }
+
+
 .project-card h2:hover {
     cursor: pointer;
+    color: var(--accent-color);
   }
+
+
 
 .project-card h2 {
     margin-bottom: 20px;
@@ -602,16 +626,107 @@ h3:hover {
 }
 
 
-.relevant-skills-section h2 {
+.relevant-skills-section h1 {
     font-size: 30px;
+    margin-bottom: 70px;
+ 
 }
 
 .relevant-skills-section .h2 {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    
+    margin-top: 45px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 
 .relevant-skills-section ul li {
     margin-left: 23px; /* Add some left margin to the list items */
+}
+
+
+
+/* Highlights Section */
+
+.content h2{
+ 
+    margin-top: -20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.collage-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: none; /* Remove the maximum width constraint */
+    margin: 0 auto; /* Center the collage */
+    width: 120%; /* Expand the collage to 100% of its parent container */
+    margin-bottom: 120px;
+}
+
+.collage-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire div */
+}
+
+/* Specific styles for individual images */
+.image-1 {
+    grid-column: span 2;
+    /* height: max-content; */
+    max-height: 500px;
+}
+
+.image-2 {
+    grid-row: span 2;
+}
+
+.image-3 {
+    height: 200px;
+}
+
+.image-4 {
+    height: 300px;
+}
+
+/* Second collage */
+
+.collage-container-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: none; /* Remove the maximum width constraint */
+    margin: 0 auto; /* Center the collage */
+    width: 120%; /* Expand the collage to 100% of its parent container */
+}
+
+.collage-item-2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.collage-item-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Specific styles for the second collage's images */
+.image-5 {
+    /* height: 99%; */
+    height : 500px;
+    width: 970px;
+}
+
+
+
+
+img{
+    border-radius: 4px;
 }
